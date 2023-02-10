@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F22ED72E29430DCF00B66CCE /* SensorsDiagnosis.docc in Sources */ = {isa = PBXBuildFile; fileRef = F22ED72D29430DCF00B66CCE /* SensorsDiagnosis.docc */; };
+		F22ED73429430DD000B66CCE /* SensorsDiagnosis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22ED72929430DCF00B66CCE /* SensorsDiagnosis.framework */; };
+		F22ED73929430DD000B66CCE /* SensorsDiagnosisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F22ED73829430DD000B66CCE /* SensorsDiagnosisTests.m */; };
+		F22ED73A29430DD000B66CCE /* SensorsDiagnosis.h in Headers */ = {isa = PBXBuildFile; fileRef = F22ED72C29430DCF00B66CCE /* SensorsDiagnosis.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F22ED744294317B900B66CCE /* SensorsDiagnosis.m in Sources */ = {isa = PBXBuildFile; fileRef = F22ED743294317B800B66CCE /* SensorsDiagnosis.m */; };
+		F22ED7472943321A00B66CCE /* SensorsConsoleDiagnostor.h in Headers */ = {isa = PBXBuildFile; fileRef = F22ED7452943321A00B66CCE /* SensorsConsoleDiagnostor.h */; };
+		F22ED7482943321A00B66CCE /* SensorsConsoleDiagnostor.m in Sources */ = {isa = PBXBuildFile; fileRef = F22ED7462943321A00B66CCE /* SensorsConsoleDiagnostor.m */; };
+		F22ED74B2943328A00B66CCE /* SensorsDatabaseDiagnostor.h in Headers */ = {isa = PBXBuildFile; fileRef = F22ED7492943328A00B66CCE /* SensorsDatabaseDiagnostor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F22ED74C2943328A00B66CCE /* SensorsDatabaseDiagnostor.m in Sources */ = {isa = PBXBuildFile; fileRef = F22ED74A2943328A00B66CCE /* SensorsDatabaseDiagnostor.m */; };
+		F22ED74F294333A100B66CCE /* SensorsDiagnosticInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = F22ED74D294333A100B66CCE /* SensorsDiagnosticInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F22ED750294333A100B66CCE /* SensorsDiagnosticInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F22ED74E294333A100B66CCE /* SensorsDiagnosticInfo.m */; };
+		F268FD632964422B0022060C /* SensorsDiagnosticCondition.h in Headers */ = {isa = PBXBuildFile; fileRef = F268FD612964422B0022060C /* SensorsDiagnosticCondition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F268FD642964422B0022060C /* SensorsDiagnosticCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = F268FD622964422B0022060C /* SensorsDiagnosticCondition.m */; };
+		F2D6E233294C173F002DA387 /* SensorsDiagnosticConsoleLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = F2D6E231294C173F002DA387 /* SensorsDiagnosticConsoleLogFormatter.h */; };
+		F2D6E234294C173F002DA387 /* SensorsDiagnosticConsoleLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D6E232294C173F002DA387 /* SensorsDiagnosticConsoleLogFormatter.m */; };
+		F2D6E237294C4907002DA387 /* SensorsDiagnosticConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = F2D6E235294C4907002DA387 /* SensorsDiagnosticConstants.h */; };
+		F2D6E238294C4907002DA387 /* SensorsDiagnosticConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F2D6E236294C4907002DA387 /* SensorsDiagnosticConstants.m */; };
+		F2DC8CB62949C0B8002E1AC8 /* SensorsDiagnosticConsoleLog.h in Headers */ = {isa = PBXBuildFile; fileRef = F2DC8CB42949C0B8002E1AC8 /* SensorsDiagnosticConsoleLog.h */; };
+		F2DC8CB72949C0B8002E1AC8 /* SensorsDiagnosticConsoleLog.m in Sources */ = {isa = PBXBuildFile; fileRef = F2DC8CB52949C0B8002E1AC8 /* SensorsDiagnosticConsoleLog.m */; };
+		F2E4DF482952E03000682B1F /* SensorsDefaultConsoleDiagnostor.h in Headers */ = {isa = PBXBuildFile; fileRef = F2E4DF462952E03000682B1F /* SensorsDefaultConsoleDiagnostor.h */; };
+		F2E4DF492952E03000682B1F /* SensorsDefaultConsoleDiagnostor.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E4DF472952E03000682B1F /* SensorsDefaultConsoleDiagnostor.m */; };
+		F2F712D929598F5C00FCEC9A /* SensorsDiagnostor.h in Headers */ = {isa = PBXBuildFile; fileRef = F2F712D729598F5C00FCEC9A /* SensorsDiagnostor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2F712DA29598F5C00FCEC9A /* SensorsDiagnostor.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F712D829598F5C00FCEC9A /* SensorsDiagnostor.m */; };
+		F2F712DE2959906F00FCEC9A /* SensorsDiagnosticObject.h in Headers */ = {isa = PBXBuildFile; fileRef = F2F712DC2959906F00FCEC9A /* SensorsDiagnosticObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2F712DF2959906F00FCEC9A /* SensorsDiagnosticObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F2F712DD2959906F00FCEC9A /* SensorsDiagnosticObject.m */; };
+		F2F712E8295AD70B00FCEC9A /* SensorsDiagnosticResolver.h in Headers */ = {isa = PBXBuildFile; fileRef = F2F712DB2959900D00FCEC9A /* SensorsDiagnosticResolver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F22ED73529430DD000B66CCE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F22ED72029430DCF00B66CCE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F22ED72829430DCF00B66CCE;
+			remoteInfo = SensorsDiagnosis;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F22ED72929430DCF00B66CCE /* SensorsDiagnosis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SensorsDiagnosis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F22ED72C29430DCF00B66CCE /* SensorsDiagnosis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SensorsDiagnosis.h; path = include/SensorsDiagnosis.h; sourceTree = "<group>"; };
+		F22ED72D29430DCF00B66CCE /* SensorsDiagnosis.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SensorsDiagnosis.docc; sourceTree = "<group>"; };
+		F22ED73329430DD000B66CCE /* SensorsDiagnosisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensorsDiagnosisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F22ED73829430DD000B66CCE /* SensorsDiagnosisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorsDiagnosisTests.m; sourceTree = "<group>"; };
+		F22ED743294317B800B66CCE /* SensorsDiagnosis.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorsDiagnosis.m; sourceTree = "<group>"; };
+		F22ED7452943321A00B66CCE /* SensorsConsoleDiagnostor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SensorsConsoleDiagnostor.h; sourceTree = "<group>"; };
+		F22ED7462943321A00B66CCE /* SensorsConsoleDiagnostor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorsConsoleDiagnostor.m; sourceTree = "<group>"; };
+		F22ED7492943328A00B66CCE /* SensorsDatabaseDiagnostor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SensorsDatabaseDiagnostor.h; path = include/SensorsDatabaseDiagnostor.h; sourceTree = "<group>"; };
+		F22ED74A2943328A00B66CCE /* SensorsDatabaseDiagnostor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorsDatabaseDiagnostor.m; sourceTree = "<group>"; };
+		F22ED74D294333A100B66CCE /* SensorsDiagnosticInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SensorsDiagnosticInfo.h; path = include/SensorsDiagnosticInfo.h; sourceTree = "<group>"; };
+		F22ED74E294333A100B66CCE /* SensorsDiagnosticInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorsDiagnosticInfo.m; sourceTree = "<group>"; };
+		F268FD612964422B0022060C /* SensorsDiagnosticCondition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SensorsDiagnosticCondition.h; path = include/SensorsDiagnosticCondition.h; sourceTree = "<group>"; };
+		F268FD622964422B0022060C /* SensorsDiagnosticCondition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorsDiagnosticCondition.m; sourceTree = "<group>"; };
+		F2D6E231294C173F002DA387 /* SensorsDiagnosticConsoleLogFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SensorsDiagnosticConsoleLogFormatter.h; sourceTree = "<group>"; };
+		F2D6E232294C173F002DA387 /* SensorsDiagnosticConsoleLogFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorsDiagnosticConsoleLogFormatter.m; sourceTree = "<group>"; };
+		F2D6E235294C4907002DA387 /* SensorsDiagnosticConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SensorsDiagnosticConstants.h; sourceTree = "<group>"; };
+		F2D6E236294C4907002DA387 /* SensorsDiagnosticConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorsDiagnosticConstants.m; sourceTree = "<group>"; };
+		F2DC8CB42949C0B8002E1AC8 /* SensorsDiagnosticConsoleLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SensorsDiagnosticConsoleLog.h; sourceTree = "<group>"; };
+		F2DC8CB52949C0B8002E1AC8 /* SensorsDiagnosticConsoleLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorsDiagnosticConsoleLog.m; sourceTree = "<group>"; };
+		F2E4DF462952E03000682B1F /* SensorsDefaultConsoleDiagnostor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SensorsDefaultConsoleDiagnostor.h; sourceTree = "<group>"; };
+		F2E4DF472952E03000682B1F /* SensorsDefaultConsoleDiagnostor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorsDefaultConsoleDiagnostor.m; sourceTree = "<group>"; };
+		F2F712D729598F5C00FCEC9A /* SensorsDiagnostor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SensorsDiagnostor.h; path = include/SensorsDiagnostor.h; sourceTree = "<group>"; };
+		F2F712D829598F5C00FCEC9A /* SensorsDiagnostor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorsDiagnostor.m; sourceTree = "<group>"; };
+		F2F712DB2959900D00FCEC9A /* SensorsDiagnosticResolver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SensorsDiagnosticResolver.h; path = include/SensorsDiagnosticResolver.h; sourceTree = "<group>"; };
+		F2F712DC2959906F00FCEC9A /* SensorsDiagnosticObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SensorsDiagnosticObject.h; path = include/SensorsDiagnosticObject.h; sourceTree = "<group>"; };
+		F2F712DD2959906F00FCEC9A /* SensorsDiagnosticObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SensorsDiagnosticObject.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F22ED72629430DCF00B66CCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22ED73029430DD000B66CCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22ED73429430DD000B66CCE /* SensorsDiagnosis.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F22ED71F29430DCF00B66CCE = {
+			isa = PBXGroup;
+			children = (
+				F22ED72B29430DCF00B66CCE /* SensorsDiagnosis */,
+				F22ED73729430DD000B66CCE /* SensorsDiagnosisTests */,
+				F22ED72A29430DCF00B66CCE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F22ED72A29430DCF00B66CCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F22ED72929430DCF00B66CCE /* SensorsDiagnosis.framework */,
+				F22ED73329430DD000B66CCE /* SensorsDiagnosisTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F22ED72B29430DCF00B66CCE /* SensorsDiagnosis */ = {
+			isa = PBXGroup;
+			children = (
+				F22ED72C29430DCF00B66CCE /* SensorsDiagnosis.h */,
+				F22ED743294317B800B66CCE /* SensorsDiagnosis.m */,
+				F2F712DB2959900D00FCEC9A /* SensorsDiagnosticResolver.h */,
+				F2F712D729598F5C00FCEC9A /* SensorsDiagnostor.h */,
+				F2F712D829598F5C00FCEC9A /* SensorsDiagnostor.m */,
+				F2F712DC2959906F00FCEC9A /* SensorsDiagnosticObject.h */,
+				F2F712DD2959906F00FCEC9A /* SensorsDiagnosticObject.m */,
+				F268FD612964422B0022060C /* SensorsDiagnosticCondition.h */,
+				F268FD622964422B0022060C /* SensorsDiagnosticCondition.m */,
+				F22ED74D294333A100B66CCE /* SensorsDiagnosticInfo.h */,
+				F22ED74E294333A100B66CCE /* SensorsDiagnosticInfo.m */,
+				F2D6E235294C4907002DA387 /* SensorsDiagnosticConstants.h */,
+				F2D6E236294C4907002DA387 /* SensorsDiagnosticConstants.m */,
+				F2DC8CB42949C0B8002E1AC8 /* SensorsDiagnosticConsoleLog.h */,
+				F2DC8CB52949C0B8002E1AC8 /* SensorsDiagnosticConsoleLog.m */,
+				F2D6E231294C173F002DA387 /* SensorsDiagnosticConsoleLogFormatter.h */,
+				F2D6E232294C173F002DA387 /* SensorsDiagnosticConsoleLogFormatter.m */,
+				F22ED7452943321A00B66CCE /* SensorsConsoleDiagnostor.h */,
+				F22ED7462943321A00B66CCE /* SensorsConsoleDiagnostor.m */,
+				F2E4DF462952E03000682B1F /* SensorsDefaultConsoleDiagnostor.h */,
+				F2E4DF472952E03000682B1F /* SensorsDefaultConsoleDiagnostor.m */,
+				F22ED7492943328A00B66CCE /* SensorsDatabaseDiagnostor.h */,
+				F22ED74A2943328A00B66CCE /* SensorsDatabaseDiagnostor.m */,
+				F22ED72D29430DCF00B66CCE /* SensorsDiagnosis.docc */,
+			);
+			path = SensorsDiagnosis;
+			sourceTree = "<group>";
+		};
+		F22ED73729430DD000B66CCE /* SensorsDiagnosisTests */ = {
+			isa = PBXGroup;
+			children = (
+				F22ED73829430DD000B66CCE /* SensorsDiagnosisTests.m */,
+			);
+			path = SensorsDiagnosisTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F22ED72429430DCF00B66CCE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2D6E237294C4907002DA387 /* SensorsDiagnosticConstants.h in Headers */,
+				F2F712E8295AD70B00FCEC9A /* SensorsDiagnosticResolver.h in Headers */,
+				F2DC8CB62949C0B8002E1AC8 /* SensorsDiagnosticConsoleLog.h in Headers */,
+				F268FD632964422B0022060C /* SensorsDiagnosticCondition.h in Headers */,
+				F2E4DF482952E03000682B1F /* SensorsDefaultConsoleDiagnostor.h in Headers */,
+				F22ED74B2943328A00B66CCE /* SensorsDatabaseDiagnostor.h in Headers */,
+				F22ED7472943321A00B66CCE /* SensorsConsoleDiagnostor.h in Headers */,
+				F2F712D929598F5C00FCEC9A /* SensorsDiagnostor.h in Headers */,
+				F2D6E233294C173F002DA387 /* SensorsDiagnosticConsoleLogFormatter.h in Headers */,
+				F2F712DE2959906F00FCEC9A /* SensorsDiagnosticObject.h in Headers */,
+				F22ED73A29430DD000B66CCE /* SensorsDiagnosis.h in Headers */,
+				F22ED74F294333A100B66CCE /* SensorsDiagnosticInfo.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F22ED72829430DCF00B66CCE /* SensorsDiagnosis */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F22ED73D29430DD000B66CCE /* Build configuration list for PBXNativeTarget "SensorsDiagnosis" */;
+			buildPhases = (
+				F22ED72429430DCF00B66CCE /* Headers */,
+				F22ED72529430DCF00B66CCE /* Sources */,
+				F22ED72629430DCF00B66CCE /* Frameworks */,
+				F22ED72729430DCF00B66CCE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SensorsDiagnosis;
+			productName = SensorsDiagnosis;
+			productReference = F22ED72929430DCF00B66CCE /* SensorsDiagnosis.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F22ED73229430DD000B66CCE /* SensorsDiagnosisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F22ED74029430DD000B66CCE /* Build configuration list for PBXNativeTarget "SensorsDiagnosisTests" */;
+			buildPhases = (
+				F22ED72F29430DD000B66CCE /* Sources */,
+				F22ED73029430DD000B66CCE /* Frameworks */,
+				F22ED73129430DD000B66CCE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F22ED73629430DD000B66CCE /* PBXTargetDependency */,
+			);
+			name = SensorsDiagnosisTests;
+			productName = SensorsDiagnosisTests;
+			productReference = F22ED73329430DD000B66CCE /* SensorsDiagnosisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F22ED72029430DCF00B66CCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					F22ED72829430DCF00B66CCE = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					F22ED73229430DD000B66CCE = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = F22ED72329430DCF00B66CCE /* Build configuration list for PBXProject "SensorsDiagnosis" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F22ED71F29430DCF00B66CCE;
+			productRefGroup = F22ED72A29430DCF00B66CCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F22ED72829430DCF00B66CCE /* SensorsDiagnosis */,
+				F22ED73229430DD000B66CCE /* SensorsDiagnosisTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F22ED72729430DCF00B66CCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22ED73129430DD000B66CCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F22ED72529430DCF00B66CCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22ED750294333A100B66CCE /* SensorsDiagnosticInfo.m in Sources */,
+				F2D6E234294C173F002DA387 /* SensorsDiagnosticConsoleLogFormatter.m in Sources */,
+				F22ED72E29430DCF00B66CCE /* SensorsDiagnosis.docc in Sources */,
+				F22ED7482943321A00B66CCE /* SensorsConsoleDiagnostor.m in Sources */,
+				F268FD642964422B0022060C /* SensorsDiagnosticCondition.m in Sources */,
+				F2DC8CB72949C0B8002E1AC8 /* SensorsDiagnosticConsoleLog.m in Sources */,
+				F2F712DA29598F5C00FCEC9A /* SensorsDiagnostor.m in Sources */,
+				F22ED74C2943328A00B66CCE /* SensorsDatabaseDiagnostor.m in Sources */,
+				F2D6E238294C4907002DA387 /* SensorsDiagnosticConstants.m in Sources */,
+				F2F712DF2959906F00FCEC9A /* SensorsDiagnosticObject.m in Sources */,
+				F22ED744294317B900B66CCE /* SensorsDiagnosis.m in Sources */,
+				F2E4DF492952E03000682B1F /* SensorsDefaultConsoleDiagnostor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F22ED72F29430DD000B66CCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22ED73929430DD000B66CCE /* SensorsDiagnosisTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F22ED73629430DD000B66CCE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F22ED72829430DCF00B66CCE /* SensorsDiagnosis */;
+			targetProxy = F22ED73529430DD000B66CCE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F22ED73B29430DD000B66CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F22ED73C29430DD000B66CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F22ED73E29430DD000B66CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 75FYWDWHL5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sensorsdata.cn.SensorsDiagnosis;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F22ED73F29430DD000B66CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 75FYWDWHL5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sensorsdata.cn.SensorsDiagnosis;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F22ED74129430DD000B66CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 75FYWDWHL5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sensorsdata.cn.SensorsDiagnosisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F22ED74229430DD000B66CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 75FYWDWHL5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sensorsdata.cn.SensorsDiagnosisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F22ED72329430DCF00B66CCE /* Build configuration list for PBXProject "SensorsDiagnosis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22ED73B29430DD000B66CCE /* Debug */,
+				F22ED73C29430DD000B66CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F22ED73D29430DD000B66CCE /* Build configuration list for PBXNativeTarget "SensorsDiagnosis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22ED73E29430DD000B66CCE /* Debug */,
+				F22ED73F29430DD000B66CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F22ED74029430DD000B66CCE /* Build configuration list for PBXNativeTarget "SensorsDiagnosisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F22ED74129430DD000B66CCE /* Debug */,
+				F22ED74229430DD000B66CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F22ED72029430DCF00B66CCE /* Project object */;
+}
