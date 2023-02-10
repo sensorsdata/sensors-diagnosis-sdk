@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |c|
     c.source_files = base_dir + '/**/*.{h,m}'
-    c.public_header_files = base_dir + 'include/*.h'
+    c.public_header_files = base_dir + '/include/*.h'
   end
 
 end
