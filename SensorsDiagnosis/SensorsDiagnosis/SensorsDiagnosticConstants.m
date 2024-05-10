@@ -12,3 +12,6 @@ NSString *const kSensorsConsoleLogFieldFunction = @"function";
 NSString *const kSensorsConsoleLogFieldLine = @"line";
 NSString *const kSensorsConsoleLogFieldMessage = @"message";
 NSString *const kSensorsConsoleLogDefaultCategory = @"SensorsDefaultConsoleLog";
+
+// SDK Version
+NSString *const kSensorsDiagnosisSDKVersion = @"0.0.3";

@@ -43,6 +43,8 @@ typedef enum : NSUInteger {
 
 - (BOOL)createColumn:(NSString *)column type:(SensorsDatabaseColumnDataType)type inTable:(NSString *)table;
 
+- (BOOL)createTextColumn:(NSString *)columnName withDefaultValue:(NSString *)defaultValue inTable:(NSString *)table;
+
 - (sqlite3_stmt *)cachedStatementWithQuery:(NSString *)query;
 
 - (BOOL)createTableWithQuery:(NSString *)query;

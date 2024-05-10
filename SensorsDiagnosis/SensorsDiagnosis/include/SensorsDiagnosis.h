@@ -43,6 +43,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)log:(SensorsDiagnosticInfoLevel)level file:(const char*)file function:(const char*)function line:(NSUInteger)line format:(NSString *)format, ... NS_FORMAT_FUNCTION(5, 6);
 
++ (NSString *)version;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -13,3 +13,6 @@ extern NSString *const kSensorsConsoleLogFieldFunction;
 extern NSString *const kSensorsConsoleLogFieldLine;
 extern NSString *const kSensorsConsoleLogFieldMessage;
 extern NSString *const kSensorsConsoleLogDefaultCategory;
+
+// SDK Version
+extern NSString *const kSensorsDiagnosisSDKVersion;

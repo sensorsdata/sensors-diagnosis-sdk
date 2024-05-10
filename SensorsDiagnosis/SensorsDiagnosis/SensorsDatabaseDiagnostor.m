@@ -120,15 +120,35 @@ NSString *const kDatabaseColumnTimestamp = @"timestamp";
     if (![column isKindOfClass:[NSString class]] || column.length == 0) {
         return NO;
     }
+    if ([self columnExists:column inTable:table]) {
+        return YES;
+    }
     NSString *datatype = [self datatypeWithType:type];
-    NSDictionary<NSString *, NSString *> *columns = [self columnsInTable:table];
-    if ([columns.allKeys containsObject:column]) {
-        if ([columns[column] isEqualToString:datatype]) {
-            return YES;
-        }
+    NSString *createColumnQuery = [NSString stringWithFormat:@"ALTER TABLE %@ ADD %@ %@;", table, column, datatype];
+    sqlite3_stmt *statement;
+    if (sqlite3_prepare_v2(_database, createColumnQuery.UTF8String, -1, &statement, NULL) != SQLITE_OK) {
+        sqlite3_finalize(statement);
         return NO;
     }
-    NSString *createColumnQuery = [NSString stringWithFormat:@"ALTER TABLE %@ ADD %@ %@;", table, column, datatype];
+    if (sqlite3_step(statement) != SQLITE_DONE) {
+        sqlite3_finalize(statement);
+        return NO;
+    }
+    sqlite3_finalize(statement);
+    return YES;
+}
+
+- (BOOL)createTextColumn:(NSString *)columnName withDefaultValue:(NSString *)defaultValue inTable:(NSString *)table {
+    if (![columnName isKindOfClass:[NSString class]] || columnName.length == 0) {
+        return NO;
+    }
+    if (![defaultValue isKindOfClass:[NSString class]] || defaultValue.length == 0) {
+        return NO;
+    }
+    if ([self columnExists:columnName inTable:table]) {
+        return YES;
+    }
+    NSString *createColumnQuery = [NSString stringWithFormat:@"ALTER TABLE %@ ADD %@ TEXT NOT NULL DEFAULT '%@';", table, columnName, defaultValue];
     sqlite3_stmt *statement;
     if (sqlite3_prepare_v2(_database, createColumnQuery.UTF8String, -1, &statement, NULL) != SQLITE_OK) {
         sqlite3_finalize(statement);
@@ -163,8 +183,15 @@ NSString *const kDatabaseColumnTimestamp = @"timestamp";
     return datatype;
 }
 
-- (NSDictionary<NSString *, NSString *> *)columnsInTable:(NSString *)table {
-    NSMutableDictionary<NSString *, NSString *> *columns = [NSMutableDictionary dictionary];
+- (BOOL)columnExists:(NSString *)columnName inTable:(NSString *)tableName {
+    if (!columnName) {
+        return NO;
+    }
+    return [[self columnsInTable:tableName] containsObject:columnName];
+}
+
+- (NSArray<NSString *> *)columnsInTable:(NSString *)table {
+    NSMutableArray<NSString *> *columns = [NSMutableArray array];
     NSString *query = [NSString stringWithFormat: @"PRAGMA table_info('%@');", table];
     sqlite3_stmt *statement;
     if (sqlite3_prepare_v2(_database, query.UTF8String, -1, &statement, NULL) != SQLITE_OK) {
@@ -178,10 +205,8 @@ NSString *const kDatabaseColumnTimestamp = @"timestamp";
             continue;
         }
         NSString *columnName = [NSString stringWithUTF8String:name];
-        char *type = (char *)sqlite3_column_text(statement, 2);
-        NSString *columnType = [NSString stringWithUTF8String:type];
-        if (columnName && columnType) {
-            columns[columnName] = columnType;
+        if (columnName) {
+            [columns addObject:columnName];
         }
     }
     sqlite3_finalize(statement);

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SensorsDiagnosis"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "The official iOS SDK of Sensors Diagnosis."
   s.homepage     = "http://www.sensorsdata.cn"
   s.source       = { :git => 'https://github.com/sensorsdata/sensors-diagnosis-sdk.git', :tag => "v#{s.version}" }
@@ -15,6 +15,7 @@ Pod::Spec.new do |s|
   s.subspec 'Core' do |c|
     c.source_files = base_dir + '/**/*.{h,m}'
     c.public_header_files = base_dir + '/include/*.h'
+    c.resource_bundles = { 'SensorsDiagnosis' => ['SensorsDiagnosis/SensorsDiagnosis/Resources/**/*']}
   end
 
 end

@@ -181,4 +181,8 @@
     [[SensorsDiagnosis sharedInstance] addDiagnosticObject:logObject];
 }
 
++ (NSString *)version {
+    return kSensorsDiagnosisSDKVersion;
+}
+
 @end
